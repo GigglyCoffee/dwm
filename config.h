@@ -91,7 +91,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-p", "run", "-m", dmenumon, "-fn", dmenufont, "-nb", nor_b, "-nf", nor_f, "-sb", sel_b, "-sf", sel_f, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", nor_b, "-nf", nor_f, "-sb", sel_b, "-sf", sel_f, NULL };
 static const char *termcmd[]  = { "konsole", NULL };
 
 
@@ -140,7 +140,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_l,      spawn,          SHCMD("slock") },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_n,      shiftview,      {.i = +1 } },
-    { MODKEY,                       XK_o,      spawn,          SHCMD("konsole -e nvim $(find /home/ 2>/dev/null | dmenu -l 20)") },
+    { MODKEY,                       XK_o,      spawn,          SHCMD("konsole -e nvim $(find /home/ 2>/dev/null | fzf)") },
 	{ MODKEY|Mod1Mask,              XK_o,      incrogaps,      {.i = +1 } },
 	{ MODKEY|Mod1Mask|ShiftMask,    XK_o,      incrogaps,      {.i = -1 } },
 	{ MODKEY,                       XK_p,      shiftview,      {.i = -1 } },
