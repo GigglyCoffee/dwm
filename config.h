@@ -30,7 +30,7 @@ static const char sel_f[]           = "#f3f5f4";
 static const char nor_b[]           = "#000000";
 static const char sel_b[]           = "#383333";
 static const char nor_border[]      = "#000000";
-static const char sel_border[]      = "#ea0000";
+static const char sel_border[]      = "#ff0000";
 
 static const char col_sel_bg[]      = "#000000";
 static const char border_sel[]      = "#FF5733";
