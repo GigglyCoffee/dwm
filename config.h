@@ -17,14 +17,9 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "monospace:size=11", "fontawesome:size=10" };
 static const char dmenufont[]       = "monospace:size=11";
-/* static const char col_gray1[]       = "#222222"; */
-/* static const char col_gray2[]       = "#444444"; */
-/* static const char col_gray3[]       = "#bbbbbb"; */
-/* static const char col_gray4[]       = "#eeeeee"; */
-/* static const char col_cyan[]        = "#005577"; */
 
-/* nor ~ normal, sel ~ selected, b ~ background, f ~ foreground */
-/* colors */
+
+/* colors, nor ~ normal, sel ~ selected, b ~ background, f ~ foreground */
 static const char nor_f[]           = "#bcbcbc";
 static const char sel_f[]           = "#f3f5f4";
 static const char nor_b[]           = "#000000";
@@ -145,6 +140,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_l,      spawn,          SHCMD("slock") },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_n,      shiftview,      {.i = +1 } },
+    { MODKEY,                       XK_o,      spawn,          SHCMD("konsole -e nvim $(find /home/ 2>/dev/null | dmenu -l 20)") },
 	{ MODKEY|Mod1Mask,              XK_o,      incrogaps,      {.i = +1 } },
 	{ MODKEY|Mod1Mask|ShiftMask,    XK_o,      incrogaps,      {.i = -1 } },
 	{ MODKEY,                       XK_p,      shiftview,      {.i = -1 } },
