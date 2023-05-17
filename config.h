@@ -137,7 +137,6 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_k,      spawn,          SHCMD("keepassxc") },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
-	{ MODKEY|ShiftMask,             XK_l,      spawn,          SHCMD("slock") },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_n,      shiftview,      {.i = +1 } },
     { MODKEY,                       XK_o,      spawn,          SHCMD("konsole -e nvim $(find /home/ 2>/dev/null | fzf)") },
@@ -153,6 +152,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_w,      spawn,          SHCMD("librewolf") },
 	{ MODKEY|ControlMask,           XK_w,      spawn,          SHCMD("librewolf -P") },
 	
+	{ MODKEY,                      	XK_Escape, spawn,          SHCMD("slock") },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
