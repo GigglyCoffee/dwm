@@ -29,6 +29,7 @@ static const char sel_border[]      = "#ff0000";
 
 static const char col_sel_bg[]      = "#000000";
 static const char border_sel[]      = "#FF5733";
+//static const char border_sel[]      = "#FF5733";
 
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
